@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أسباب الابتزاز الإلكتروني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #ffffff;
+            color: #1a73e8;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #1a73e8;
+            margin-bottom: 30px;
+        }
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(50% - 20px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 15px;
+        }
+        .techniques {
+            background: #f0f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .techniques h3 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        .techniques ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .techniques li {
+            margin-bottom: 10px;
+            padding-right: 20px;
+            position: relative;
+        }
+        .techniques li::before {
+            content: '•';
+            color: #1a73e8;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+        .facts {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .facts h3 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        .facts p {
+            margin-bottom: 10px;
+        }
+        .cta {
+            background: #1a73e8;
+            color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .cta h2 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #1a73e8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #f0f7ff;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>أسباب الابتزاز الإلكتروني</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="reasons" class="section">
+            <div class="container">
+                <h2 class="section-title">لماذا يحدث الابتزاز الإلكتروني؟</h2>
+                <p class="section-subtitle">تزداد حالات الابتزاز الإلكتروني يومًا بعد يوم، ولكن هل تساءلت عن الأسباب التي تجعله منتشرًا؟</p>
+                <div class="cards">
+                    <div class="card">
+                        <h3>📸 1. مشاركة المعلومات الشخصية بشكل مفرط</h3>
+                        <p>الصور والبيانات التي نشاركها قد تصبح أداة في يد الأشخاص الخطأ.</p>
+                    </div>
+                    <div class="card">
+                        <h3>💬 2. ضعف الوعي الرقمي</h3>
+                        <p>الكثير منّا يجهل إعدادات الخصوصية وكيفية حماية بياناته على الإنترنت.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎯 3. الوقوع في فخ الثقة الزائفة</h3>
+                        <p>بعض المبتزين يكتسبون ثقة الضحية عبر المحادثات أو العلاقات الوهمية.</p>
+                    </div>
+                    <div class="card">
+                        <h3>💻 4. البرمجيات الضارة والاختراقات</h3>
+                        <p>الأجهزة غير المؤمنة قد تُخترق بسهولة، مما يعرض البيانات للخطر.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="techniques" class="section">
+            <div class="container">
+                <h2 class="section-title">التقنيات المستخدمة من قبل المبتزين</h2>
+                <div class="techniques">
+                    <h3>🔒 1. التصيد الاحتيالي (Phishing):</h3>
+                    <p>المبتزون يستغلون الثقة عبر رسائل تبدو وكأنها من مصادر موثوقة مثل البنوك أو الشركات الكبيرة.</p>
+                    <ul>
+                        <li>📩 كيف يحدث؟ قد يتلقى الضحية رسالة بريد إلكتروني مزيفة تحتوي على رابط مزيف يطلب منه إدخال بياناته الشخصية.</li>
+                        <li>🛑 كن يقظًا! تحقق دائمًا من عنوان المرسل قبل النقر على أي رابط.</li>
+                    </ul>
+                </div>
+                <div class="techniques">
+                    <h3>🎭 2. الهندسة الاجتماعية (Social Engineering):</h3>
+                    <p>المبتز يُتقن التلاعب النفسي، يظهر تعاطفًا أو يقدم مساعدة للحصول على معلومات حساسة.</p>
+                    <ul>
+                        <li>🤝 مثال: شخص يدعي أنه صديق قديم أو موظف شركة تقنية ويطلب منك كلمة المرور بحجة المساعدة.</li>
+                        <li>💡 كيف تتجنبها؟ لا تشارك معلوماتك الشخصية مع أي شخص غير موثوق، مهما بدت القصة مقنعة.</li>
+                    </ul>
+                </div>
+                <div class="techniques">
+                    <h3>👁️‍🗨️ 3. برمجيات التجسس (Spyware):</h3>
+                    <p>برامج تُثبَّت خلسة على جهازك لمراقبة أنشطتك، مثل تسجيل كلمات المرور أو التنصت عبر الكاميرا والميكروفون.</p>
+                    <ul>
+                        <li>🖥️ كيف تصل إلى جهازك؟ غالبًا من خلال روابط ملغومة أو برامج غير موثوقة يتم تحميلها من الإنترنت.</li>
+                        <li>🔐 كيف تحمي نفسك؟ استخدم برامج مكافحة الفيروسات، وابتعد عن تحميل البرامج من مصادر مجهولة.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="facts" class="section">
+            <div class="container">
+                <h2 class="section-title">حقائق غير متوقعة</h2>
+                <div class="facts">
+                    <p>📊 أكثر الضحايا المحتملين: الأشخاص الذين يستخدمون شبكات Wi-Fi عامة دون إجراءات حماية، مثل المقاهي والمطارات.</p>
+                    <p>🔑 اختراق الحسابات الخاصة: أكثر من 40% من حالات الابتزاز الإلكتروني تبدأ بعد اختراق حسابات مواقع التواصل الاجتماعي.</p>
+                    <p>📱 الأجهزة الذكية: المبتزون قد يستغلون عدم تحديث برامج الأمان في الهواتف للتسلل إلى بياناتك الشخصية.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>🛑 لا تدع هذه الأسباب تجعلك ضحية!</h2>
+                <p>اتخذ خطوات بسيطة لحماية نفسك من الآن.</p>
+                <p>🔗 تصفح بقية الأقسام لتعرف كيف تحمي نفسك من هذه المخاطر.</p>
+                <a href="risks.html" class="btn">تعرف على المخاطر</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const animatedElements = document.querySelectorAll('.card, .techniques, .facts');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = `fadeInUp 1s forwards ${entry.target.dataset.delay}`;
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach((el, index) => {
+                el.dataset.delay = `${index * 0.2}s`;
+                observer.observe(el);
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الوعي بالابتزاز الإلكتروني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 30px;
+        }
+        .question {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+        .question.wrong {
+            background-color: #ffe6e6;
+            border: 1px solid #ff4444;
+        }
+        .question.correct {
+            background-color: #e6ffe6;
+            border: 1px solid #44ff44;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            padding: 10px;
+            background: #f0f7ff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .options label:hover {
+            background: #d0e3ff;
+        }
+        input[type="radio"] {
+            margin-left: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #1a73e8;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: #1557b0;
+        }
+        #result {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        #result.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .home-button {
+            display: inline-block;
+            background: #1a73e8;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .home-button:hover {
+            background: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>اختبار الوعي بالابتزاز الإلكتروني</h1>
+        <form id="quiz-form">
+            <div class="question" data-correct="D">
+                <p>1. ما هو الابتزاز الإلكتروني؟</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q1" value="A"> طلب المال مقابل حماية البيانات</label></li>
+                    <li><label><input type="radio" name="q1" value="B"> تهديد شخص عبر الإنترنت للحصول على مكاسب مادية أو معنوية</label></li>
+                    <li><label><input type="radio" name="q1" value="C"> نشر معلومات شخصية دون إذن</label></li>
+                    <li><label><input type="radio" name="q1" value="D"> جميع ما سبق</label></li>
+                </ul>
+            </div>
+            <div class="question" data-correct="B">
+                <p>2. ما هي الفئة العمرية الأكثر عرضة للابتزاز الإلكتروني؟</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q2" value="A"> الأطفال تحت 12 سنة</label></li>
+                    <li><label><input type="radio" name="q2" value="B"> الشباب بين 18 و30 سنة</label></li>
+                    <li><label><input type="radio" name="q2" value="C"> الأشخاص فوق 50 سنة</label></li>
+                    <li><label><input type="radio" name="q2" value="D"> جميع الفئات بالتساوي</label></li>
+                </ul>
+            </div>
+            <div class="question" data-correct="D">
+                <p>3. ما هي الطريقة الأكثر شيوعًا لاختراق الأجهزة المستخدمة في الابتزاز؟</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q3" value="A"> تحميل برامج غير معروفة</label></li>
+                    <li><label><input type="radio" name="q3" value="B"> التصيد الاحتيالي عبر البريد الإلكتروني</label></li>
+                    <li><label><input type="radio" name="q3" value="C"> شبكات Wi-Fi العامة</label></li>
+                    <li><label><input type="radio" name="q3" value="D"> كل ما سبق</label></li>
+                </ul>
+            </div>
+            <div class="question" data-correct="C">
+                <p>4. أي من الإجراءات التالية يعتبر طريقة صحيحة لتجنب الابتزاز الإلكتروني؟</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q4" value="A"> تجاهل تحديثات البرامج</label></li>
+                    <li><label><input type="radio" name="q4" value="B"> مشاركة كلمات المرور مع الأصدقاء</label></li>
+                    <li><label><input type="radio" name="q4" value="C"> استخدام شبكات VPN والحماية بكلمات مرور قوية</label></li>
+                    <li><label><input type="radio" name="q4" value="D"> فتح أي رابط يصلك عبر البريد الإلكتروني</label></li>
+                </ul>
+            </div>
+            <div class="question" data-correct="C">
+                <p>5. ما هو الإجراء المناسب إذا تعرضت للابتزاز الإلكتروني؟</p>
+                <ul class="options">
+                    <li><label><input type="radio" name="q5" value="A"> دفع المال للمبتز</label></li>
+                    <li><label><input type="radio" name="q5" value="B"> حذف المحادثة ونسيان الأمر</label></li>
+                    <li><label><input type="radio" name="q5" value="C"> الإبلاغ عن الموقف للجهات المختصة</label></li>
+                    <li><label><input type="radio" name="q5" value="D"> محاولة التفاوض مع المبتز</label></li>
+                </ul>
+            </div>
+            <button type="submit" class="submit-btn">تحقق من إجاباتك</button>
+        </form>
+        <div id="result"></div>
+        <div style="text-align: center;">
+            <a href="index.html" class="home-button">العودة للصفحة الرئيسية</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const questions = document.querySelectorAll('.question');
+            let score = 0;
+            
+            questions.forEach((question, index) => {
+                const selected = document.querySelector(`input[name="q${index + 1}"]:checked`);
+                const correctAnswer = question.dataset.correct;
+                
+                // Remove previous classes
+                question.classList.remove('correct', 'wrong');
+                
+                if (selected) {
+                    if (selected.value === correctAnswer) {
+                        score++;
+                        question.classList.add('correct');
+                    } else {
+                        question.classList.add('wrong');
+                    }
+                } else {
+                    question.classList.add('wrong');
+                }
+            });
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `لقد حصلت على ${score} من 5 نقاط`;
+            resultDiv.classList.add('show');
+            
+            // Scroll to results
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
+

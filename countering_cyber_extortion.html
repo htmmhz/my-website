@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التصدي للابتزاز الإلكتروني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #ffffff;
+            color: #1a73e8;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .home-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(33% - 20px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: right;
+        }
+        .card li {
+            margin-bottom: 5px;
+        }
+        .future-section {
+            background: #f0f7ff;
+            padding: 50px 0;
+            margin-top: 40px;
+        }
+        .future-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .future-card h3 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        .future-card ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: right;
+        }
+        .future-card li {
+            margin-bottom: 10px;
+        }
+        .preparation {
+            background: #e6f2ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .preparation h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        .preparation ol {
+            text-align: right;
+            padding-right: 20px;
+        }
+        .cta {
+            background: #1a73e8;
+            color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #1a73e8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #f0f7ff;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="home-button">🏠</a>
+            <h1>التصدي للابتزاز الإلكتروني</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="protection" class="section">
+            <div class="container">
+                <h2 class="section-title">كيف تحمي نفسك من الابتزاز الإلكتروني؟</h2>
+                <p class="section-subtitle">يمكنك تقليل خطر الوقوع ضحية للابتزاز بخطوات بسيطة وفعالة</p>
+                <div class="cards">
+                    <div class="card">
+                        <h3>🔒 1. حافظ على خصوصيتك الرقمية</h3>
+                        <ul>
+                            <li>لا تشارك صورًا أو معلومات حساسة مع أي شخص عبر الإنترنت.</li>
+                            <li>قم بضبط إعدادات الخصوصية على حساباتك</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>🛡️ 2. استخدم كلمات مرور قوية</h3>
+                        <ul>
+                            <li>اختر كلمات مرور معقدة ومختلفة لكل حساب.</li>
+                            <li>قم بتحديث كلمات المرور بانتظام.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>📱 3. كن حذرًا في التفاعلات عبر الإنترنت</h3>
+                        <ul>
+                            <li>لا تثق بسهولة في الغرباء أو العروض المشبوهة.</li>
+                            <li>تجنب الضغط على الروابط المجهولة.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>💾 4. احمِ أجهزتك من الاختراق</h3>
+                        <ul>
+                            <li>قم بتثبيت برامج مكافحة الفيروسات وتحديثها باستمرار.</li>
+                            <li>تجنب تنزيل تطبيقات أو ملفات من مصادر غير معروفة.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>📣 5. لا تخف من طلب المساعدة</h3>
+                        <ul>
+                            <li>إذا تعرضت لمحاولة ابتزاز، قم بالإبلاغ فورًا.</li>
+                            <li>تواصل مع الجهات المختصة أو شخص تثق به.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="future-section">
+            <div class="container">
+                <h2 class="section-title">الابتزاز الإلكتروني في المستقبل: ما الذي ينتظرنا؟ 🤖</h2>
+                <p class="section-subtitle">مع تطور التكنولوجيا، تتغير أساليب المبتزين لتصبح أكثر تطورًا ودهاءً. دعونا نستكشف ما قد يحمله المستقبل وكيف نحمي أنفسنا:</p>
+                <div class="future-card">
+                    <h3>🌐 1. الهجمات عبر الذكاء الاصطناعي (AI):</h3>
+                    <ul>
+                        <li>قد يستخدم المبتزون تقنيات الذكاء الاصطناعي لإنشاء مقاطع فيديو أو صور مزيفة (Deepfake) تبدو حقيقية تمامًا.</li>
+                        <li>🎥 مثال: إنشاء فيديو مزيف لشخصية مشهورة أو حتى لشخص عادي لأغراض الابتزاز.</li>
+                        <li>🔐 كيف تحمي نفسك؟ توخي الحذر من الصور والفيديوهات المشبوهة، واستخدام أدوات للتحقق من صحة الوسائط.</li>
+                    </ul>
+                </div>
+                <div class="future-card">
+                    <h3>📱 2. استهداف الأجهزة الذكية:</h3>
+                    <ul>
+                        <li>مع تزايد استخدام الأجهزة المنزلية الذكية، قد يحاول المبتزون اختراق كاميرات المراقبة أو السماعات الذكية.</li>
+                        <li>🛡️ مثال: استخدام جهاز ذكي مخترق للتجسس على المحادثات الخاصة.</li>
+                        <li>💡 كيف تحمي نفسك؟ تحديث البرامج بانتظام واستخدام كلمات مرور قوية لجميع الأجهزة.</li>
+                    </ul>
+                </div>
+                <div class="future-card">
+                    <h3>💻 3. استغلال البيانات الشخصية الضخمة:</h3>
+                    <ul>
+                        <li>في المستقبل، قد يعتمد المبتزون على تحليل البيانات التي تجمعها التطبيقات والشبكات الاجتماعية.</li>
+                        <li>📊 مثال: التنبؤ بسلوكك أو احتياجاتك للضغط عليك نفسيًا.</li>
+                        <li>🚫 كيف تحمي نفسك؟ تجنب مشاركة بيانات حساسة مع تطبيقات أو مواقع غير موثوقة.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="preparation" class="section">
+            <div class="container">
+                <div class="preparation">
+                    <h2>كيف نصبح مستعدين؟ 🛠️</h2>
+                    <ol>
+                        <li>1️⃣ التوعية المستمرة: تعرف على أحدث تقنيات الابتزاز لتكون دائمًا مستعدًا.</li>
+                        <li>2️⃣ الحماية الرقمية: استخدم برامج مكافحة الفيروسات، وشبكات VPN لحماية خصوصيتك.</li>
+                        <li>3️⃣ التعاون مع السلطات: لا تخف من الإبلاغ عن أي محاولة مشبوهة مهما كانت بسيطة.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <p>✨ في عالم مليء بالتطورات الرقمية، تذكر دائمًا أن وعيك هو سلاحك الأقوى، وحمايتك تبدأ بخطوة صغيرة من الحذر. 🔒</p>
+                <a href="index.html" class="btn">العودة للصفحة الرئيسية</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const animatedElements = document.querySelectorAll('.card, .future-card, .preparation');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = `fadeInUp 1s forwards ${entry.target.dataset.delay}`;
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach((el, index) => {
+                el.dataset.delay = `${index * 0.2}s`;
+                observer.observe(el);
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

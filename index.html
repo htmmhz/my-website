@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع التوعية ضد الابتزاز الإلكتروني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #ffffff;
+            color: #1a73e8;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .quiz-section {
+            background: #f0f7ff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .quiz-button {
+            display: inline-block;
+            background: #1a73e8;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+        }
+        .quiz-button:hover {
+            background: #1557b0;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+            min-height: 70vh;
+        }
+        .hero-text {
+            flex: 1;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: scaleIn 1s forwards 0.5s;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .awareness-section {
+            background: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .awareness-title {
+            font-size: 2em;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        .rotating-text {
+            font-size: 1.2em;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rotating-text p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .rotating-text p.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .source {
+            display: block;
+            margin-top: 10px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .source:hover {
+            text-decoration: underline;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #1a73e8;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            min-width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: #1a73e8;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #1557b0;
+        }
+        .cta {
+            background: #f0f7ff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .cta h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes scaleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>موقع التوعية ضد الابتزاز الإلكتروني</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-text">
+                <h2>مرحبا بك في موقعنا!</h2>
+                <p>نهدف إلى توعية الجميع بمخاطر الابتزاز الإلكتروني وكيفية الوقاية منه.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://up6.cc/2024/11/173252554481571.jpg" alt="الابتزاز الإلكتروني" width="400" height="400">
+            </div>
+        </section>
+
+        <section class="awareness-section">
+            <div class="container">
+                <h2 class="awareness-title">لماذا الوعي من الابتزاز الإلكتروني؟</h2>
+                <div class="rotating-text">
+                    <p class="active">وفقًا لدراسة في السلطنة ، فإن طلاب الجامعات والكليات هم ا��أكثر تعرضًا للابتزاز الإلكتروني. ورغم ذلك، يرى 80% من المشاركين أن حملات التوعية غير كافية وتحتاج لتنظيم أفضل لتقليل تأثيراتها السلبية <a href="https://search.mandumah.com/Record/1083864" class="source" target="_blank">المصدر</a></p>
+                    <p>تؤكد دراسة تحليلية أن الابتزاز الإلكتروني ازداد مع التوسع في وسائل التواصل الاجتماعي، مع وجود فجوات قانونية في بعض الدول. هذه الفجوات تزيد من تعقيد المشكلة وتضعف قدرة المجتمعات على الحماية <a href="https://search.mandumah.com/" class="source" target="_blank">المصدر</a></p>
+                    <p>توصي الدراسات بحملات توعية مكثفة ومستمرة لتعزيز الأمان الرقمي، بما في ذلك تعليم الأفراد كيفية تجنب التهديدات الرقمية وحماية أنفسهم وأسرهم من الجرائم الإلكترونية <a href="https://search.mandumah.com/" class="source" target="_blank">المصدر</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="section">
+            <div class="container">
+                <h2 class="section-title">🛡️ حماية نفسك تبدأ بالوعي!</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>الأسباب</h3>
+                        <p>تعرف على الأسباب الشائعة للابتزاز الإلكتروني</p>
+                        <a href="causes.html" class="btn">اقرأ المزيد</a>
+                    </div>
+                    <div class="card">
+                        <h3>المخاطر</h3>
+                        <p>اكتشف الآثار النفسية والاجتماعية للابتزاز الإلكتروني</p>
+                        <a href="risks.html" class="btn">اقرأ المزيد</a>
+                    </div>
+                    <div class="card">
+                        <h3>التصدي للإبتزاز الإلكتروني</h3>
+                        <p>تعلم كيفية حماية نفسك والتصدي لمحاولات الابتزاز</p>
+                        <a href="countering_cyber_extortion.html" class="btn">اقرأ المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>📢 لا تكن ضحية، ابدأ الآن!</h2>
+                <p>تصفح أقسام الموقع للحصول على المساعدة والنصائح.</p>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <div class="container">
+                <h2>اختبر نفسك</h2>
+                <p>قم باختبار معرفتك حول الابتزاز الإلكتروني وكيفية حماية نفسك</p>
+                <a href="quiz.html" class="quiz-button">ابدأ الاختبار</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Animate cards on scroll
+            const cards = document.querySelectorAll('.card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = `fadeInUp 1s forwards ${entry.target.dataset.delay}`;
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach((card, index) => {
+                card.dataset.delay = `${index * 0.2}s`;
+                observer.observe(card);
+            });
+
+            // Rotating text
+            const rotatingTexts = document.querySelectorAll('.rotating-text p');
+            let currentTextIndex = 0;
+
+            function rotateText() {
+                rotatingTexts[currentTextIndex].classList.remove('active');
+                currentTextIndex = (currentTextIndex + 1) % rotatingTexts.length;
+                rotatingTexts[currentTextIndex].classList.add('active');
+            }
+
+            setInterval(rotateText, 4000);
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

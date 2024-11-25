@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخاطر الابتزاز الإلكتروني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #ffffff;
+            color: #1a73e8;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .home-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(50% - 20px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: right;
+        }
+        .card li {
+            margin-bottom: 5px;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .highlight h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        .cta {
+            background: #1a73e8;
+            color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta h2 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #1a73e8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #f0f7ff;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="home-button">🏠</a>
+            <h1>مخاطر الابتزاز الإلكتروني</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="risks" class="section">
+            <div class="container">
+                <h2 class="section-title">ما هي مخاطر الابتزاز الإلكتروني؟</h2>
+                <p class="section-subtitle">قد يبدو الابتزاز الإلكتروني مجرد تهديد، لكنه يترك آثارًا عميقة على الضحية</p>
+                <div class="cards">
+                    <div class="card">
+                        <h3>💔 1. تأثير نفسي مدمر</h3>
+                        <ul>
+                            <li>شعور دائم بالخوف والقلق</li>
+                            <li>الاكتئاب وفقدان الثقة بالنفس</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>🌐 2. عزلة اجتماعية</h3>
+                        <ul>
+                            <li>الابتعاد عن الأصدقاء والعائلة</li>
+                            <li>فقدان الدعم الاجتماعي</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>💸 3. خسائر مالية</h3>
+                        <ul>
+                            <li>خسارة الحسابات أو البيانات المهمة</li>
+                            <li>دفع الأموال للمبتز لإستعادة الملفات</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <h2>💡 لست وحدك!</h2>
+                    <p>تشير الدراسات إلى أن أكثر من 80% من حالات الابتزاز الإلكتروني يتم حلها دون ضرر كبير إذا تم الإبلاغ عنها مبكرًا.</p>
+                    <p>هناك فرق متخصصة وجهات قانونية جاهزة دائمًا لمساعدتك.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>🚀 حمايتك تبدأ الآن!</h2>
+                <p>اتخذ هذه الإجراءات لتبقى آمنًا ولتحمي من تحب.</p>
+                <p>🔗 اكتشف المزيد في باقي أقسام الموقع لتعم الفائدة.</p>
+                <a href="countering_cyber_extortion.html" class="btn">تعلم كيفية التصدي للابتزاز الإلكتروني</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const animatedElements = document.querySelectorAll('.card, .highlight');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = `fadeInUp 1s forwards ${entry.target.dataset.delay}`;
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach((el, index) => {
+                el.dataset.delay = `${index * 0.2}s`;
+                observer.observe(el);
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
