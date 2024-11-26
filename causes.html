@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أسباب الابتزاز الإلكتروني</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://l.top4top.io/p_32529h0b51.png" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -21,9 +22,9 @@
             background: linear-gradient(to bottom, #e6f2ff, #ffffff);
         }
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
         }
         header {
@@ -32,36 +33,50 @@
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2em;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .home-button img {
+            width: 32px;
+            height: 32px;
         }
         .section {
-            padding: 50px 0;
+            padding: 40px 0;
             text-align: center;
         }
         .section-title {
-            font-size: 2em;
+            font-size: 1.8em;
             color: #1a73e8;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .section-subtitle {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #555;
             margin-bottom: 30px;
         }
         .cards {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
             gap: 20px;
         }
         .card {
             background: #ffffff;
             border-radius: 10px;
             padding: 20px;
-            width: calc(50% - 20px);
+            width: 100%;
+            max-width: 400px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
             opacity: 0;
@@ -73,11 +88,13 @@
         .card h3 {
             color: #1a73e8;
             margin-bottom: 10px;
+            font-size: 1.2em;
         }
         .card p {
             margin-bottom: 15px;
+            font-size: 0.9em;
         }
-        .techniques {
+        .techniques, .facts {
             background: #f0f7ff;
             padding: 30px;
             border-radius: 10px;
@@ -85,49 +102,38 @@
             opacity: 0;
             transform: translateY(20px);
         }
-        .techniques h3 {
+        .techniques h3, .facts h3 {
             color: #1a73e8;
             margin-bottom: 15px;
+            font-size: 1.2em;
         }
-        .techniques ul {
+        .techniques ul, .facts ul {
             list-style-type: none;
             padding: 0;
+            text-align: right;
         }
-        .techniques li {
+        .techniques li, .facts li {
             margin-bottom: 10px;
             padding-right: 20px;
             position: relative;
+            font-size: 0.9em;
         }
-        .techniques li::before {
+        .techniques li::before, .facts li::before {
             content: '•';
             color: #1a73e8;
             font-weight: bold;
             position: absolute;
             right: 0;
         }
-        .facts {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        .facts h3 {
-            color: #1a73e8;
-            margin-bottom: 15px;
-        }
-        .facts p {
-            margin-bottom: 10px;
-        }
         .cta {
             background: #1a73e8;
             color: #ffffff;
-            padding: 50px 0;
+            padding: 40px 0;
             text-align: center;
         }
         .cta h2 {
             margin-bottom: 20px;
+            font-size: 1.5em;
         }
         .btn {
             display: inline-block;
@@ -137,6 +143,7 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background 0.3s ease;
+            font-size: 1em;
         }
         .btn:hover {
             background: #f0f7ff;
@@ -147,11 +154,42 @@
                 transform: translateY(0);
             }
         }
+        @media (min-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .section-subtitle {
+                font-size: 1.2em;
+            }
+            .card h3 {
+                font-size: 1.4em;
+            }
+            .card p, .techniques li, .facts li {
+                font-size: 1em;
+            }
+            .cta h2 {
+                font-size: 1.8em;
+            }
+        }
+        @media (min-width: 1024px) {
+            .card {
+                width: calc(33.333% - 20px);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
+            <a href="index.html" class="home-button">
+                <img src="https://cdn-icons-png.flaticon.com/128/17821/17821825.png" alt="الصفحة الرئيسية">
+            </a>
             <h1>أسباب الابتزاز الإلكتروني</h1>
         </div>
     </header>
@@ -257,7 +295,7 @@
                         behavior: 'smooth'
                     });
                 });
-            });
+});
         });
     </script>
 </body>
