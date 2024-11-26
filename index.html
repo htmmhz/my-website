@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التوعية ضد الابتزاز الإلكتروني</title>
+    <title> التوعية ضد الابتزاز الإلكتروني</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://l.top4top.io/p_32529h0b51.png" type="image/x-icon">
+
     <style>
         * {
             margin: 0;
@@ -92,24 +94,28 @@
             color: #1a73e8;
             margin-bottom: 20px;
         }
-        .rotating-text {
-            font-size: 1.2em;
-            min-height: 100px;
+        .awareness-title .highlight {
+            color: #ff0000;
+        }
+        .text-container {
+            height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 20px;
         }
-        .rotating-text p {
+        .rotating-text {
+            font-size: 1.2em;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s, transform 0.5s;
         }
-        .rotating-text p.active {
+        .rotating-text.active {
             opacity: 1;
             transform: translateY(0);
         }
         .source {
-            display: block;
+            display: inline-block;
             margin-top: 10px;
             color: #1a73e8;
             text-decoration: none;
@@ -186,6 +192,14 @@
                 transform: scale(1);
             }
         }
+        @media (max-width: 768px) {
+            .text-container {
+                height: 200px;
+            }
+            .rotating-text {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -202,18 +216,17 @@
                 <p>نهدف إلى توعية الجميع بمخاطر الابتزاز الإلكتروني وكيفية الوقاية منه.</p>
             </div>
             <div class="hero-image">
-                <img src="https://k.top4top.io/p_3251b7p2w1.jpg" alt="الابتزاز الإلكتروني" width="400" height="400">
+                <img src="https://up6.cc/2024/11/173252554481571.jpg" alt="الابتزاز الإلكتروني" width="400" height="400">
             </div>
         </section>
 
         <section class="awareness-section">
             <div class="container">
-                <h2 class="awareness-title">لماذا الوعي من الابتزاز الإلكتروني؟</h2>
-                <div class="rotating-text">
-                    <p class="active">وفقًا لدراسة في السلطنة ، فإن طلاب الجامعات والكليات هم ا��أكثر تعرضًا للابتزاز الإلكتروني. ورغم ذلك، يرى 80% من المشاركين أن حملات التوعية غير كافية وتحتاج لتنظيم أفضل لتقليل تأثيراتها السلبية <a href="https://search.mandumah.com/Record/1083864" class="source" target="_blank">المصدر</a></p>
-                    <p>تؤكد دراسة تحليلية أن الابتزاز الإلكتروني ازداد مع التوسع في وسائل التواصل الاجتماعي، مع وجود فجوات قانونية في بعض الدول. هذه الفجوات تزيد من تعقيد المشكلة وتضعف قدرة المجتمعات على الحماية <a href="https://search.mandumah.com/Record/1083864" class="source" target="_blank">المصدر</a></p>
-                    <p>توصي الدراسات بحملات توعية مكثفة ومستمرة لتعزيز الأمان الرقمي، بما في ذلك تعليم الأفراد كيفية تجنب التهديدات الرقمية وحماية أنفسهم وأسرهم من الجرائم الإلكترونية <a href="https://search.mandumah.com/Record/1083864" class="source" target="_blank">المصدر</a></p>
+                <h2 class="awareness-title">لمذا نحتاج إلى زيادة الوعي ضد <span class="highlight">الابتزاز الإلكتروني؟</span></h2>
+                <div class="text-container">
+                    <p class="rotating-text active"></p>
                 </div>
+                <a href="#" class="source" target="_blank">المصدر</a>
             </div>
         </section>
 
@@ -240,13 +253,6 @@
             </div>
         </section>
 
-        <section class="cta">
-            <div class="container">
-                <h2>📢 لا تكن ضحية، ابدأ الآن!</h2>
-                <p>تصفح أقسام الموقع للحصول على المساعدة والنصائح.</p>
-            </div>
-        </section>
-
         <section class="quiz-section">
             <div class="container">
                 <h2>اختبر نفسك</h2>
@@ -255,6 +261,13 @@
             </div>
         </section>
     </main>
+
+    <section class="cta">
+        <div class="container">
+            <h2>📢 لا تكن ضحية، ابدأ الآن!</h2>
+            <p>تصفح أقسام الموقع للحصول على المساعدة والنصائح.</p>
+        </div>
+    </section>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -274,16 +287,38 @@
             });
 
             // Rotating text
-            const rotatingTexts = document.querySelectorAll('.rotating-text p');
+            const rotatingText = document.querySelector('.rotating-text');
+            const sourceLink = document.querySelector('.source');
+            const texts = [
+                {
+                    text: "وفقًا لدراسة في السلطنة ، فإن طلاب الجامعات والكليات هم الأكثر تعرضًا للابتزاز الإلكتروني. ورغم ذلك، يرى 80% من المشاركين أن حملات التوعية غير كافية وتحتاج لتنظيم أفضل لتقليل تأثيراتها السلبية",
+                    source: "https://search.mandumah.com/Record/1083864"
+                },
+                {
+                    text: "تؤكد دراسة تحليلية أن الابتزاز الإلكتروني ازداد مع التوسع في وسائل التواصل الاجتماعي، مع وجود فجوات قانونية في بعض الدول. هذه الفجوات تزيد من تعقيد المشكلة وتضعف قدرة المجتمعات على الحماية",
+                    source: "https://search.mandumah.com/Record/981083"
+                },
+                {
+                    text: "توضح دراسة منشورة في المجلة البريطانية لعلم الإجرام كيف يؤثر الابتزاز الإلكتروني على الصحة النفسية والاجتماعية للضحايا، مما يؤكد أهمية التوعية المجتمعية وتعزيز التشريعات لمكافحة هذا النوع من الجرائم",
+                    source: "https://academic.oup.com/bjc/article/61/5/1187/6156658?login=false"
+                }
+            ];
+
             let currentTextIndex = 0;
 
             function rotateText() {
-                rotatingTexts[currentTextIndex].classList.remove('active');
-                currentTextIndex = (currentTextIndex + 1) % rotatingTexts.length;
-                rotatingTexts[currentTextIndex].classList.add('active');
+                rotatingText.classList.remove('active');
+                setTimeout(() => {
+                    currentTextIndex = (currentTextIndex + 1) % texts.length;
+                    rotatingText.textContent = texts[currentTextIndex].text;
+                    sourceLink.href = texts[currentTextIndex].source;
+                    rotatingText.classList.add('active');
+                }, 500);
             }
 
-            setInterval(rotateText, 4000);
+            rotatingText.textContent = texts[0].text;
+            sourceLink.href = texts[0].source;
+            setInterval(rotateText, 8000);
 
             // Smooth scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
